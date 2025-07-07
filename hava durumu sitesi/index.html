@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hava Durumu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container" id="weatherApp">
+    <h1>Hava Durumu</h1>
+    
+    <div class="input-wrapper">
+      <input type="text" id="cityInput" placeholder="🔭 Bir şehir adı yaz ." />
+    </div>
+    <button onclick="getWeather()">Göster</button>
+
+    <div class="weather-box" id="weatherBox">
+      <!-- Hava durumu bilgisi burada gösterilecek -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+  <script>
+    const cityInput = document.getElementById('cityInput');
+    cityInput.addEventListener('focus', () => {
+      cityInput.classList.add('focused');
+    });
+    cityInput.addEventListener('blur', () => {
+      cityInput.classList.remove('focused');
+    });
+  </script>
+
+</body>
+</html>
